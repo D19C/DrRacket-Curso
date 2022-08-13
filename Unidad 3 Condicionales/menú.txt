@@ -1,0 +1,64 @@
+#elabora algotitmo que permita capturar un numero y que calcule su valor absoluto
+#numero y que calcule su valor absoluto
+def  menu():
+        print ("Menu principal")
+        print ("1. valor absoluto de un  numero") 
+        print ("2. signo de un numero ")
+        print ("3. determinar el numero mayor")
+        print ("4. salir")
+        op = int (input ("5. selecciones opcion (1..4)? "))
+        if (op == 1):
+                   x=int (input ("entre el numero -->"))
+                   x=miabs (x)
+                   print ("Su ABS -->", x)
+                   tecla=input("presione enter para volver al menu")
+                   menu()
+        else:
+            if (op == 2):
+                    x=int (input ("entre un numero "))
+                    signo (x)
+                    tecla=input("presione enter para volver al menu")
+                    menu()
+            else:
+                if (op == 3):
+                        n1= int (input ("Entre el numero 1-->"))
+                        n2= int (input ("Entre el numero 2-->"))
+                        n3= int (input ("Entre el numero 3-->"))
+                        mayor (n1,n2,n3)
+                        tecla=input("presione enter para volver al menu")
+                        menu()
+                else:
+                        print ("Fin del programa")
+#-----------------------------------------------------------------------
+
+def miabs(num):
+    if (num < 0):
+        num = num* (-1)
+    return num
+
+#--------------------------------------------------------------
+def signo(num):
+    if (num == 0):
+            print ("El numero es neutro")
+    else:
+        if (num > 0):
+                print ("El numero es positivo")
+        else:
+                print ("El numero es negativo")
+
+#-----------------------------------------------------------------
+#Elaborar un algoritmo que capture tres numeros
+#y que indique cual de estos es el mayor
+def mayor (n1 , n2 , n3):
+    if ((n1 >= n2) and (n1 >= n3)):
+            print ("El numero mayor es -->", n1)
+    else:
+        if ((n2 >= n1) and (n2 >= n3)):
+                print ("El numero mayor es -->", n2)
+        else:
+                print ("El numero mayor es -->", n3)
+
+#--------------------------------------------------
+
+#llamado
+menu()
